@@ -1,9 +1,9 @@
 import React from 'react';
 import Images from '../config/Images';
-import { ButtonSolid, ScreenContainer, withTheme } from '@draftbit/ui';
+import { ButtonSolid, ScreenContainer, Spacer, withTheme } from '@draftbit/ui';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-const Onboarding1Screen = props => {
+const Onboarding3Screen = props => {
   const { theme } = props;
   const { navigation } = props;
 
@@ -28,18 +28,18 @@ const Onboarding1Screen = props => {
               console.error(err);
             }
           }}
-          style={styles.ButtonSolid4140f39b}
+          style={styles.ButtonSolida61a214d}
           title={'Skip'}
         />
         <Image
           style={styles.Imagec17ad071}
-          source={Images.Imageavtar}
+          source={Images.Imageavtar2}
           resizeMode={'contain'}
         />
         {/* Card Container */}
         <View
           style={[
-            styles.View41f7cfa6,
+            styles.Viewec60e485,
             {
               backgroundColor: theme.colors.custom_rgb255_255_255,
               borderRadius: 27,
@@ -50,29 +50,31 @@ const Onboarding1Screen = props => {
           <View style={styles.Viewec82adf6}>
             <Text
               style={[
-                styles.Text3a7eda5b,
+                styles.Text3d76a7c1,
                 { color: theme.colors.grayscale100 },
               ]}
             >
-              {'The best app for '}
+              {'Application surely'}
             </Text>
 
+            <Text style={styles.Text21aa74dc}>{'Viewed by'}</Text>
+            <Spacer top={16} right={5} bottom={16} left={5} />
             <Text
               style={[
-                styles.Textad7e81b8,
-                { color: theme.colors.custom_rgb0_198_161 },
-              ]}
-            >
-              {'Find'}
-            </Text>
-
-            <Text
-              style={[
-                styles.Text05cc7efb,
+                styles.Text6d29bb0b,
                 { color: theme.colors.custom_rgb0_204_154 },
               ]}
             >
-              {'Your Dream Job'}
+              {'each'}
+            </Text>
+
+            <Text
+              style={[
+                styles.Text6d29bb0b,
+                { color: theme.colors.custom_rgb0_204_154 },
+              ]}
+            >
+              {'company'}
             </Text>
           </View>
 
@@ -83,16 +85,6 @@ const Onboarding1Screen = props => {
           </Text>
           {/* slider */}
           <View style={styles.View28ebd9ed}>
-            {/* active */}
-            <View
-              style={[
-                styles.View834ec99d,
-                {
-                  backgroundColor: theme.colors.custom_rgb0_204_154,
-                  borderRadius: 100,
-                },
-              ]}
-            />
             {/* inactive */}
             <View
               style={[
@@ -113,11 +105,21 @@ const Onboarding1Screen = props => {
                 },
               ]}
             />
+            {/* active */}
+            <View
+              style={[
+                styles.Viewfbea9203,
+                {
+                  backgroundColor: theme.colors.custom_rgb0_204_154,
+                  borderRadius: 100,
+                },
+              ]}
+            />
           </View>
           <ButtonSolid
             onPress={() => {
               try {
-                navigation.navigate('Onboarding2Screen');
+                navigation.navigate('SignInCreateAccountScreen');
               } catch (err) {
                 console.error(err);
               }
@@ -126,7 +128,7 @@ const Onboarding1Screen = props => {
               styles.ButtonSolid2d5f6a36,
               { backgroundColor: theme.colors.primary },
             ]}
-            title={'Next'}
+            title={'Get Started'}
           />
         </View>
       </View>
@@ -135,32 +137,32 @@ const Onboarding1Screen = props => {
 };
 
 const styles = StyleSheet.create({
-  ButtonSolid4140f39b: {
+  ButtonSolida61a214d: {
     borderRadius: 0,
     fontFamily: 'System',
     fontWeight: '400',
     textAlign: 'center',
     left: 130,
-    top: 25,
+    top: 40,
     fontSize: 20,
   },
   Imagec17ad071: {
     height: 330,
     width: 320,
   },
-  Text3a7eda5b: {
+  Text3d76a7c1: {
     fontFamily: 'MPLUSRounded1c_700Bold',
-    fontSize: 20,
+    fontSize: 24,
     lineHeight: 32,
   },
-  Textad7e81b8: {
+  Text21aa74dc: {
     fontFamily: 'MPLUSRounded1c_700Bold',
-    fontSize: 20,
+    fontSize: 24,
     lineHeight: 32,
   },
-  Text05cc7efb: {
+  Text6d29bb0b: {
     fontFamily: 'MPLUSRounded1c_700Bold',
-    fontSize: 20,
+    fontSize: 24,
     lineHeight: 32,
   },
   Viewec82adf6: {
@@ -180,11 +182,6 @@ const styles = StyleSheet.create({
     marginRight: 24,
     marginLeft: 24,
   },
-  View834ec99d: {
-    height: 10,
-    width: 32,
-    marginRight: 12,
-  },
   View318d664a: {
     width: 10,
     height: 10,
@@ -193,6 +190,11 @@ const styles = StyleSheet.create({
   Viewf12a4246: {
     width: 10,
     height: 10,
+  },
+  Viewfbea9203: {
+    height: 10,
+    width: 32,
+    marginLeft: 12,
   },
   View28ebd9ed: {
     flexDirection: 'row',
@@ -206,9 +208,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
   },
-  View41f7cfa6: {
+  Viewec60e485: {
     alignItems: 'center',
-    paddingTop: 32,
+    paddingTop: 24,
     marginRight: 24,
     marginLeft: 24,
     paddingBottom: 20,
@@ -227,4 +229,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(Onboarding1Screen);
+export default withTheme(Onboarding3Screen);

@@ -8,6 +8,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import theme from './themes/DraftbitTheme.js';
 
 import Onboarding1Screen from './screens/Onboarding1Screen';
+import Onboarding2Screen from './screens/Onboarding2Screen';
+import Onboarding3Screen from './screens/Onboarding3Screen';
+import SignInCreateAccountScreen from './screens/SignInCreateAccountScreen';
 import SplashScreen from './screens/SplashScreen';
 
 const Stack = createStackNavigator();
@@ -59,12 +62,27 @@ export default function RootAppNavigator() {
         <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
-          options={{ title: 'Splash' }}
+          options={{ title: 'splash' }}
         />
         <Stack.Screen
           name="Onboarding1Screen"
           component={Onboarding1Screen}
           options={{ title: 'Onboarding 1' }}
+        />
+        <Stack.Screen
+          name="SignInCreateAccountScreen"
+          component={SignInCreateAccountScreen}
+          options={{ title: 'Sign In - Create Account' }}
+        />
+        <Stack.Screen
+          name="Onboarding2Screen"
+          component={Onboarding2Screen}
+          options={{ title: 'Onboarding 2' }}
+        />
+        <Stack.Screen
+          name="Onboarding3Screen"
+          component={Onboarding3Screen}
+          options={{ title: 'Onboarding 3' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

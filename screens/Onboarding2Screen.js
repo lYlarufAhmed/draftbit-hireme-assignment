@@ -1,9 +1,9 @@
 import React from 'react';
 import Images from '../config/Images';
-import { ButtonSolid, ScreenContainer, withTheme } from '@draftbit/ui';
+import { ButtonSolid, ScreenContainer, Spacer, withTheme } from '@draftbit/ui';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-const Onboarding1Screen = props => {
+const Onboarding2Screen = props => {
   const { theme } = props;
   const { navigation } = props;
 
@@ -33,7 +33,7 @@ const Onboarding1Screen = props => {
         />
         <Image
           style={styles.Imagec17ad071}
-          source={Images.Imageavtar}
+          source={Images.Imageavtar1}
           resizeMode={'contain'}
         />
         {/* Card Container */}
@@ -54,16 +54,20 @@ const Onboarding1Screen = props => {
                 { color: theme.colors.grayscale100 },
               ]}
             >
-              {'The best app for '}
+              {'Better'}
             </Text>
-
+            <Spacer top={16} right={5} bottom={16} left={5} />
             <Text
               style={[
                 styles.Textad7e81b8,
                 { color: theme.colors.custom_rgb0_198_161 },
               ]}
             >
-              {'Find'}
+              {'future'}
+            </Text>
+            <Spacer top={16} right={5} bottom={16} left={5} />
+            <Text style={[styles.Textd6a71706, { color: theme.colors.strong }]}>
+              {'is starting'}
             </Text>
 
             <Text
@@ -72,7 +76,7 @@ const Onboarding1Screen = props => {
                 { color: theme.colors.custom_rgb0_204_154 },
               ]}
             >
-              {'Your Dream Job'}
+              {'from you'}
             </Text>
           </View>
 
@@ -83,16 +87,6 @@ const Onboarding1Screen = props => {
           </Text>
           {/* slider */}
           <View style={styles.View28ebd9ed}>
-            {/* active */}
-            <View
-              style={[
-                styles.View834ec99d,
-                {
-                  backgroundColor: theme.colors.custom_rgb0_204_154,
-                  borderRadius: 100,
-                },
-              ]}
-            />
             {/* inactive */}
             <View
               style={[
@@ -100,6 +94,16 @@ const Onboarding1Screen = props => {
                 {
                   backgroundColor: theme.colors.sliderInactive,
                   borderRadius: 64,
+                },
+              ]}
+            />
+            {/* active */}
+            <View
+              style={[
+                styles.View834ec99d,
+                {
+                  backgroundColor: theme.colors.custom_rgb0_204_154,
+                  borderRadius: 100,
                 },
               ]}
             />
@@ -117,7 +121,7 @@ const Onboarding1Screen = props => {
           <ButtonSolid
             onPress={() => {
               try {
-                navigation.navigate('Onboarding2Screen');
+                navigation.navigate('Onboarding3Screen');
               } catch (err) {
                 console.error(err);
               }
@@ -158,6 +162,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 32,
   },
+  Textd6a71706: {
+    fontFamily: 'MPLUSRounded1c_700Bold',
+    fontSize: 20,
+    lineHeight: 32,
+  },
   Text05cc7efb: {
     fontFamily: 'MPLUSRounded1c_700Bold',
     fontSize: 20,
@@ -180,14 +189,14 @@ const styles = StyleSheet.create({
     marginRight: 24,
     marginLeft: 24,
   },
-  View834ec99d: {
-    height: 10,
-    width: 32,
-    marginRight: 12,
-  },
   View318d664a: {
     width: 10,
     height: 10,
+    marginRight: 12,
+  },
+  View834ec99d: {
+    height: 10,
+    width: 32,
     marginRight: 12,
   },
   Viewf12a4246: {
@@ -227,4 +236,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(Onboarding1Screen);
+export default withTheme(Onboarding2Screen);
